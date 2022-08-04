@@ -1,3 +1,4 @@
+import java.text.MessageFormat;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class Main {
             }
 
             if (i < 4) {
-                System.out.println("You have %s tries left. Please try again.".formatted(5 - i));
+                System.out.println(MessageFormat.format("You have {0} tries left. Please try again.",5 - i));
             } else if (i == 4) {
                 System.out.println("You have 1 try left. Please try again.");
             } else {
