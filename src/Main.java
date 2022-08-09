@@ -24,7 +24,7 @@ public class Main {
             }
 
             if (i < maxTries - 1) {
-                System.out.println(MessageFormat.format("You have {0} tries left. Please try again.", 5 - i));
+                System.out.println(MessageFormat.format("You have {0} tries left. Please try again.", maxTries - i));
             } else if (i == maxTries - 1) {
                 System.out.println("You have 1 try left. Please try again.");
             } else {
