@@ -9,7 +9,9 @@ public class Main {
 
         System.out.println("Begin guessing a number between 0 and 99");
 
-        for (int i = 1; i <= 5; i++) {
+        int maxTries = 5;
+
+        for (int i = 1; i <= maxTries; i++) {
             int userNumber = new Scanner(System.in).nextInt();
 
             if (userNumber > numberToGuess) {
@@ -21,9 +23,9 @@ public class Main {
                 break;
             }
 
-            if (i < 4) {
+            if (i < maxTries - 1) {
                 System.out.println(MessageFormat.format("You have {0} tries left. Please try again.", 5 - i));
-            } else if (i == 4) {
+            } else if (i == maxTries - 1) {
                 System.out.println("You have 1 try left. Please try again.");
             } else {
                 System.out.println("Sorry you didn't guess the number, the answer was: " + numberToGuess);
